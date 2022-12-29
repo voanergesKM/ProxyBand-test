@@ -13,3 +13,9 @@ export const fetchPosts = async id => {
 
   return data;
 };
+
+export const fetchAlbums = async id => {
+  const data = await axios.get(`/albums?userId=${id}`);
+
+  return data;
+};
