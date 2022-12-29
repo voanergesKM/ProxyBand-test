@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ProxyBand-test/static/css/main.2d1f573f.css",
+    "main.js": "/ProxyBand-test/static/js/main.88ca7920.js",
+    "static/js/787.578a584e.chunk.js": "/ProxyBand-test/static/js/787.578a584e.chunk.js",
+    "index.html": "/ProxyBand-test/index.html",
+    "main.2d1f573f.css.map": "/ProxyBand-test/static/css/main.2d1f573f.css.map",
+    "main.88ca7920.js.map": "/ProxyBand-test/static/js/main.88ca7920.js.map",
+    "787.578a584e.chunk.js.map": "/ProxyBand-test/static/js/787.578a584e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d1f573f.css",
+    "static/js/main.88ca7920.js"
+  ]
+}
