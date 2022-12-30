@@ -1,10 +1,10 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { NotFoundPage } from './pages/404/404';
-import { HomePage } from './pages/HomePage';
+import { HomePage } from './pages/Home/HomePage';
 // import  UsersPosts  from './pages/PostsPage';
 
-const UserPosts = lazy(() => import('../src/pages/PostsPage'));
+const UserPosts = lazy(() => import('./pages/UserPosts/PostsPage'));
 
 function App() {
   return (

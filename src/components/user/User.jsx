@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { CgWebsite } from 'react-icons/cg';
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import { AlbumModal } from '../AlbumsModal/AlbumModal';
 
 import {
@@ -84,4 +86,21 @@ export const User = ({
       {isModalOpen && <AlbumModal onToggle={() => setIsModalOpen(false)} id={id} />}
     </>
   );
+};
+
+User.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    address: PropTypes.shape({
+      city: PropTypes.string.isRequired,
+      street: PropTypes.string.isRequired,
+      suite: PropTypes.string.isRequired,
+    }),
+    phone: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
+    company: PropTypes.shape({ name: PropTypes.string.isRequired }),
+  }),
 };

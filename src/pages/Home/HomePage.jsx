@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import FadeLoader from 'react-spinners/FadeLoader';
+import { ErrorMesage } from '../../components/ErrorMessage/ErrorMesage';
 
-import { User } from '../components/user/User';
+import { User } from '../../components/user/User';
 
-import { fetchAllUsers } from '../redux/users/usersOperations';
+import { fetchAllUsers } from '../../redux/users/usersOperations';
 import { Container, UsersList } from './HomePage.styled';
 
 const spinnerStyle = {
@@ -24,6 +25,7 @@ export const HomePage = () => {
 
   const usersList = useSelector(state => state.users.items);
   const isLoading = useSelector(state => state.users.isLoading);
+  const error = useSelector(state => state.users.error);
 
   return (
     <Container>
@@ -35,13 +37,16 @@ export const HomePage = () => {
         aria-label="Loading Spinner"
         data-testid="loader"
       />
-      {!isLoading && usersList && (
+
+      {!isLoading && !error && usersList && (
         <UsersList>
           {usersList.map(item => (
             <User key={item.id} item={item} />
           ))}
         </UsersList>
       )}
+
+      {!isLoading && error && <ErrorMesage />}
     </Container>
   );
 };
