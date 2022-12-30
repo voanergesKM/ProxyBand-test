@@ -3,8 +3,10 @@ import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import FadeLoader from 'react-spinners/FadeLoader';
+import PropTypes from 'prop-types';
 import { AlbumDescription, AlbumItem, Backdrop, CloseBtn, StyledModal } from './AlbumsModl.styled';
 import { fetchUserAlbums } from '../../redux/userAlbums/albumsOperations';
+import { ErrorMesage } from '../ErrorMessage/ErrorMesage';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -19,6 +21,7 @@ export const AlbumModal = ({ onToggle, id }) => {
   const dispatch = useDispatch();
   const albums = useSelector(state => state.albums.items);
   const isLoading = useSelector(state => state.albums.isLoading);
+  const error = useSelector(state => state.albums.error);
 
   useEffect(() => {
     dispatch(fetchUserAlbums(id));
@@ -54,7 +57,8 @@ export const AlbumModal = ({ onToggle, id }) => {
           aria-label="Loading Spinner"
           data-testid="loader"
         />
-        {!isLoading && albums && (
+
+        {!isLoading && !error && albums && (
           <ul>
             {albums.map(item => (
               <AlbumItem key={item.id}>
@@ -64,6 +68,8 @@ export const AlbumModal = ({ onToggle, id }) => {
           </ul>
         )}
 
+        {error && !isLoading && <ErrorMesage />}
+
         <CloseBtn onClick={() => onToggle()}>
           <AiOutlineCloseCircle size={30} />
         </CloseBtn>
@@ -71,4 +77,9 @@ export const AlbumModal = ({ onToggle, id }) => {
     </Backdrop>,
     modalRoot
   );
+};
+
+AlbumModal.propTypes = {
+  onToggle: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };

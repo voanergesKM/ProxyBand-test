@@ -14,7 +14,7 @@ const spinnerStyle = {
   transform: 'translate(-50%, -50%)',
 };
 
-export const UsersPosts = () => {
+const UsersPosts = () => {
   const dispatch = useDispatch();
   const params = useParams();
   const posts = useSelector(state => state.posts.items);
@@ -51,3 +51,5 @@ export const UsersPosts = () => {
     </Container>
   );
 };
+
+export default UsersPosts;
