@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/ProxyBand-test/static/css/main.2d1f573f.css",
-    "main.js": "/ProxyBand-test/static/js/main.88ca7920.js",
-    "static/js/787.578a584e.chunk.js": "/ProxyBand-test/static/js/787.578a584e.chunk.js",
+    "main.css": "/ProxyBand-test/static/css/main.78f18f4a.css",
+    "main.js": "/ProxyBand-test/static/js/main.32798b74.js",
+    "static/js/66.636e25be.chunk.js": "/ProxyBand-test/static/js/66.636e25be.chunk.js",
+    "static/js/692.f7c1b9fc.chunk.js": "/ProxyBand-test/static/js/692.f7c1b9fc.chunk.js",
     "index.html": "/ProxyBand-test/index.html",
-    "main.2d1f573f.css.map": "/ProxyBand-test/static/css/main.2d1f573f.css.map",
-    "main.88ca7920.js.map": "/ProxyBand-test/static/js/main.88ca7920.js.map",
-    "787.578a584e.chunk.js.map": "/ProxyBand-test/static/js/787.578a584e.chunk.js.map"
+    "main.78f18f4a.css.map": "/ProxyBand-test/static/css/main.78f18f4a.css.map",
+    "main.32798b74.js.map": "/ProxyBand-test/static/js/main.32798b74.js.map",
+    "66.636e25be.chunk.js.map": "/ProxyBand-test/static/js/66.636e25be.chunk.js.map",
+    "692.f7c1b9fc.chunk.js.map": "/ProxyBand-test/static/js/692.f7c1b9fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d1f573f.css",
-    "static/js/main.88ca7920.js"
+    "static/css/main.78f18f4a.css",
+    "static/js/main.32798b74.js"
   ]
 }
